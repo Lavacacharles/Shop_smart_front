@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from 'antd';
 import { Card } from 'antd';
 import '../App.css'
+
 const { Meta } = Card;
 
 const ImagePortada = (props) => {
@@ -26,3 +27,5 @@ const ImagePortada = (props) => {
 };
 
 export default ImagePortada;
+
+

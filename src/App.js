@@ -4,6 +4,8 @@ import PaginaPrincipal from './componentes/pagina_principal';
 import Buscador from './componentes/buscador.';
 import Fondo from './imagenes/fondo_ripley.jpg'
 import Logo from './imagenes/ripley_logo.png'
+import Navigation_products from './componentes/navigation_products';
+
 function App() {
   return (
     <body className='body_master'>
@@ -14,15 +16,7 @@ function App() {
       <Barra_lateral className="Barra_lateral"></Barra_lateral>
 
     </header>
-
-      {/* <img src={Fondo} className='Fondo'></img> */}
-      {/* <img 
-        className="test_and_component" 
-        alt="Image" 
-        src="https://images.prismic.io/ripley-cms/ZyARVK8jQArTz6z8_pe-desk-sl3-appfest-zapatillas-281024.jpg?auto=format,compress&rect=0,1,2800,951&w=1920&h=652"
-      /> */}
-      <PaginaPrincipal></PaginaPrincipal>
-
+      <Navigation_products className="Navigation_bar"/>
     </body>
   );
 }
