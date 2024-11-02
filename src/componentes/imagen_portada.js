@@ -21,7 +21,9 @@ const ImagePortada = (props) => {
             className='portada_card_texto' 
             //   title={props.nombre} 
             description={props.nombre}
+        
         />
+        <p className='portada_card_precio'>{props.precio}</p>
         </Card>
     )
 };

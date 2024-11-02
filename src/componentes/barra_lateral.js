@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Drawer, Space} from 'antd';
-import Chat_bot_mensaje from './chat_mensaje';
 import { AutoComplete } from 'antd';
+import Chat_bot_mensaje from './chat_mensaje';
 import ImageInput from './image_input';
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -17,7 +17,7 @@ const Barra_lateral = () => {
   const handleEnviarMensaje = async () => {
     setTextoShow("")
     setChat_bot_enviar_al_bot(!Chat_bot_enviar_al_bot);
-    await delay(1000)
+    await delay(100)
     setTextoUsuario("")
   }
   

@@ -1,10 +1,9 @@
+import React from 'react';
 import Barra_lateral from './componentes/barra_lateral';
-import './App.css'; 
-import PaginaPrincipal from './componentes/pagina_principal';
-import Buscador from './componentes/buscador.';
-import Fondo from './imagenes/fondo_ripley.jpg'
-import Logo from './imagenes/ripley_logo.png'
+import Buscador from './componentes/buscador';
 import Navigation_products from './componentes/navigation_products';
+import Logo from './imagenes/ripley_logo.png'
+import './App.css'; 
 
 function App() {
   return (

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import chat_bot_icon from '../imagenes/chat_bot_icon.jpg';
 import '../App.css';
-import { AutoComplete, Input } from 'antd';
-
 const optionsTexto = [
   {
     value: 'Hola, en que te puedo ayudar 😊😊😊',

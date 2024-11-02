@@ -7,7 +7,7 @@ const Navigation_products = () => (
     <div
       style={{
         position: 'fixed',
-        top:65,
+        top:57,
         padding: '10px',
         zIndex: 20,
         width: '100%',

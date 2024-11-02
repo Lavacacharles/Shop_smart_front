@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import ImagePortada from './imagen_portada';
 import '../App.css'; 
@@ -15,12 +16,12 @@ const PaginaPrincipal = (props) => {
             }
         };
         fetchLinks();
-    }, []); 
+    }, [props.file_json]); 
   
     return(
         <div className="PaginaPrincipal">
             {links.map(link => (
-                <ImagePortada link={link.link} nombre={link.nombres}/>
+                <ImagePortada link={link.link} nombre={link.nombres} precio={link.precios}/>
             ))}
         </div>
     );
