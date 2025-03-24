@@ -10,15 +10,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10; 
-  height: fit-content ;
-  display: flex ;
+  z-index: 2; 
+  /* height: fit-content ; */
+  display: flex;
   /* justify-content: center;  */
-  /* align-items: center;      */
+  align-items: center; 
+  border: none;    
 }
 .header_logo{
-  align-self: center;
-  padding-left: 50px;
+  /* align-self: center; */
+  padding-left: 15px;
+  padding-right: 15px;
   max-height: 50px;
 }
 .header_texto{
@@ -35,12 +37,16 @@
 .Buscador_container{
   /* border: 2px solid black; */
   width: 100%;
+  justify-self: center;
+  /* padding-right: 550px; */
   /* width: ; */
 }
 
 .Buscador{
   /* width: 50%; */
   align-self: center  ;
+  justify-self: center;
+  margin-right: 200px;
   margin-left: 50px;
   left: 40px;
   min-width: fit-content;
@@ -133,35 +139,86 @@
 
 }
 
+.scroll_pantalla {
+  /* border: 2px solid black; */
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  /* height: 150px; */
+  z-index: 1;
+}
 
-/* .test_and_component{
-  margin-top: 70px;
-  width: 50%  ;
-} */
-
-/* .Barra_lateral{ */
-  /* right: 0; */
-  /* position: fixed; */
-  /* display: flex; */
-/* } */
-.Barra_lateral_boton{
+.Barra_lateral{
+  background: linear-gradient(16deg, #050e5d, #bf78fe) !important;
+} 
+.Barra_lateral_boton {
   position: fixed;
   padding-left: 10px;
   padding-right: 10px;
-  top : 18px;
-  right: 100px;
-  width: 100px;
+  background: linear-gradient(16deg, #050e5d, #bf78fe) !important;
+  top: 18px;
+  right: 25px;
+  width: fit-content;
+  justify-self: center;
+  color: #ffffff !important;
+  border: none !important;
+  transition: background 0.1s ease !important;
 }
 
+.Barra_lateral_boton:hover, .Barra_lateral_boton:focus {
+  background: linear-gradient(16deg, #5f67b6, #bf78fe) !important; /* Verde a naranja */
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+.chat_boton_logo{
+  width: 25px;
+}
+.chat_boton_panel{
+  background: linear-gradient(16deg, #5f67b6, #bf78fe) !important; /* Verde a naranja */
+  color: white !important;
+  border: none;
+}
+.chat_boton_panel:hover{
+  background: linear-gradient(16deg, #818df9, #bf78fe) !important; /* Verde a naranja */
+  color: white p !important;
+  border: none;
+}
+/* 
+.Barra_lateral_boton {
+  position: fixed;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: linear-gradient(16deg, #050e5d, #bf78fe) !important;
+  top: 18px;
+  right: 25px;
+  width: 100px;
+  color: #ffffff !important;
+  border: none !important;
+  transition: background 0.1s ease !important; 
+}
+
+.Barra_lateral_boton:hover, .Barra_lateral_boton:focus {
+  background: linear-gradient(16deg, #050e5d, #bf78fe) !important;
+  color: #ffffff !important; 
+  border-color: transparent !important; 
+} */
 .chat_bot_container{
   width: 500px;
-
+  background: linear-gradient(16deg, #abb2f7, #dcbafa) !important;
+}
+.chat_mensajes_fondo{
+  /* background-color: linear-gradient(16deg, #abb2f7, #dcbafa) !important; */
+  background: linear-gradient(16deg, #abb2f7, #dcbafa) !important;
+  /* z-index: 5; */
 }
 .chat_bot_buzon_mensajes{
-  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  /* background: linear-gradient(16deg, #abb2f7, #dcbafa) !important; */
   max-height: calc(100vh - 200px);
   overflow-y: auto;
-  padding-right: 10px;
+  /* padding: 10px; */
 }
 .chat_bot_container_mensaje{
   margin-top: 5px;
@@ -170,31 +227,45 @@
   gap: 10px;
 }
 .chat_bot_mensaje{
+  background: linear-gradient(16deg, #5b62ae, #bf78fe) !important;
   right: 0;
+  height: fit-content;
   width: fit-content;
-  background-color: beige;
-  border: 2px solid black;
+  max-width: 400px;
+  color: white;
+  /* background-color: beige; */
+  /* border: 2px solid black; */
   border-radius: 10px;
-  text-align: right;
+  text-align: left;
   padding: 10px;
   height: fit-content;
+  
   /* margin-bottom: 50px; */
 }
-
+.imagen_usuario{
+  /* width: 150px; */
+  /* height: 150px; */
+  height: 150px;
+  background-color: red;
+  border-radius: 20px;
+  /* max-height: 120px; */
+}
 .chat_bot_container_icon {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-
 .chat_bot_icon {
-  max-height: 80%;
-  max-width: 80%;
+  width: 30px; /* Ajusta el tamaño según lo necesario */
+  height: 30px; 
+  border-radius: 50%;
+  object-fit: cover; /* Asegura que la imagen se vea bien sin aplastarse */
+  display: block;
 }
 
 
@@ -209,12 +280,18 @@
 
 .chat_bot_usuario_mensaje{
   /* right: 0; */
-  background-color: beige;
-  border: 2px solid black;
+  background-color: rgb(240, 240, 240);
+  border: none;
   border-radius: 10px;
+  width: fit-content;
+  max-width: 300px;
   text-align: right;
   padding: 10px;
   height: fit-content;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal; /* Permite que el texto envuelva al llegar al borde */
+
   /* height: 30px; */
 }
 
@@ -226,9 +303,10 @@
   margin-bottom: 20px;
   width: 400px;
   right: 40px; 
-  border: 2px solid black;
-  border-radius: 50px;
-  background-color: rgba(189, 189, 189, 0.749);
+  border: 2px  black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(227, 227, 227, 0.749);
   display: flex;
   justify-content: flex-end;
   gap:5px;
@@ -241,9 +319,19 @@
   height: 30px;
 }
 .chat_bot_botton_enviar_mensaje_usuario{
-  background-color: beige;
+  /* background-color: beige; */
+  background-color: none;
+  background: none !important;
+  background-color: none !important;
+  border: none;
+  cursor: pointer;
   text-decoration-color: black;
   right: 0;
+}
+.char_logo_enviar{
+  max-height: 20px;
+  background: none !important;
+  background-color: none !important;
 }
 .camera_container{
   position: 'relative';
@@ -254,4 +342,37 @@
   cursor: pointer;
   /* width: 50px; */
   height: 20px; 
+}
+
+
+.chat_bot_mensaje p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-cards-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

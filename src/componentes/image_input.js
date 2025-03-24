@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Camera_icon from '../imagenes/camera_icon.png' 
 import '../App.css'
 const ImageInput = (props) => {
-    const [imagePreview, setImagePreview] = useState(null);
     const [imageFile, setImageFile] = useState(null);
-  
+
+    useEffect(() => {
+      console.log("cambio imgfile en el input")
+      if(imageFile){
+        props.handleCamera(imageFile);
+        console.log(imageFile)
+      }
+    }, [imageFile])
+
     const handleImageChange = (event) => {
       const file = event.target.files[0];
+      
       if (file) {
-        setImageFile(file);
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          setImagePreview(reader.result); // Establece la vista previa como base64
-        };
-        reader.readAsDataURL(file); // Convierte la imagen a base64
+        setImageFile(file)
+        // props.handleCamera(file);
+        // const reader = new FileReader();
+        // // reader.onloadend = () => {
+        // //   setImagePreview(reader.result);
+        // // };
+        // // reader.readAsDataURL(file);
+        // props.handleCamera(file);
       }
     };
+    
+    
     const handleClick = () => {
         document.getElementById('hiddenFileInput').click();
       };
@@ -37,16 +49,6 @@ const ImageInput = (props) => {
             alt="Camera Icon"
           />
     
-          {imagePreview && (
-            <div style={{ position: 'absolute', top: '60px', left: '0', textAlign: 'center' }}>
-              <h4>Vista previa:</h4>
-              <img 
-                src={imagePreview} 
-                alt="Preview" 
-                style={{ width: '200px', height: 'auto', borderRadius: '8px', border: '2px solid #ddd' }}
-              />
-            </div>
-          )}
         </div>
       );
     };

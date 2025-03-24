@@ -1,0 +1,43 @@
+.navitems_panel {
+    position: relative;
+    height: 40px;
+    width: 150px; 
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white;
+    border-radius:50px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.navbutton{
+    height: 100%;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    background: linear-gradient(16deg, #141b54, #bf78fe) !important;
+}
+.navbutton:hover{
+    background: linear-gradient(16deg, #434d9f, #bf78fe) !important;
+}
+.navlist {
+    display: block;
+    background-color: #e9e8e8;
+    padding: 10px;
+    position: absolute;
+    width: 100px;
+    border-radius: 10px;
+    z-index: 21;
+  }
+.navcaption {
+    background-color: aquamarine;
+    width: 100%; /* O ajusta el tamaño si necesitas que ocupe menos espacio */
+    padding: 10px;
+    border-radius: 5px; /* Redondea las esquinas si lo deseas */
+    margin-bottom: 5px; /* Agrega un poco de espacio entre los elementos */
+}
+
+.navtext{
+    color: #8f3cd8;
+}

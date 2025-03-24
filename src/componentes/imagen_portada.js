@@ -17,12 +17,14 @@ const ImagePortada = (props) => {
                 />
             }
         >
-        <Meta 
-            className='portada_card_texto' 
-            //   title={props.nombre} 
-            description={props.nombre}
-        
-        />
+        <a href={props.link_producto}>
+            <Meta 
+                className='portada_card_texto' 
+                //   title={props.nombre} 
+                description={props.nombre}
+            
+            />
+        </a>
         <p className='portada_card_precio'>{props.precio}</p>
         </Card>
     )

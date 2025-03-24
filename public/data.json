@@ -1,0 +1,4 @@
+{
+    "api_text":"http://54.225.206.202:8000/chat_text",
+    "api_image":"http://54.225.206.202:8000/chat_image"
+}
